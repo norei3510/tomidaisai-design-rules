@@ -1,0 +1,48 @@
+/* Shared tokens v0.1.0. Source: current visitor UI, 2026-10-21. */
+:root {
+  --bg: #c8e7ff;
+  --white: #ffffff;
+  --main: #2082c3;
+  --main-dark: #18679d;
+  --main-pressed: #125580;
+  --accent: #f26a00;
+  --accent-text: #b34a00;
+  --accent-dark: #903c00;
+  --ink: #173a52;
+  --muted: #5b7a93;
+  --danger: #d93636;
+  --surface-soft: #eaf5ff;
+  --surface-warm: #fff1e5;
+  --border: #c6dfef;
+  --overlay: rgba(23, 58, 82, .45);
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-body: 16px;
+  --font-lg: 18px;
+  --font-xl: 22px;
+  --font-2xl: 26px;
+  --font-display: 34px;
+  --leading-body: 1.7;
+  --leading-heading: 1.3;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-card: 14px;
+  --radius-input: 10px;
+  --radius-chip: 8px;
+  --radius-modal: 20px;
+  --radius-pill: 999px;
+  --radius: var(--radius-card);
+  --shadow-1: 0 2px 8px rgba(23, 58, 82, .15);
+  --shadow-2: 0 8px 24px rgba(23, 58, 82, .22);
+  --shadow: var(--shadow-1);
+  --font-family-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+}
