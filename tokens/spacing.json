@@ -1,0 +1,13 @@
+{
+  "$description": "余白トークン（4の倍数）。値の正はこのファイル。使う場面は guidelines/FOUNDATIONS.md §4。画像の座標・罫線幅・フォーカス枠・セーフエリアはスケールの対象外。",
+  "space": {
+    "0": { "$type": "dimension", "$value": "0px" },
+    "1": { "$type": "dimension", "$value": "4px", "$description": "アイコンとラベル、ナビのアイコンと文字" },
+    "2": { "$type": "dimension", "$value": "8px", "$description": "ボタン同士・入力とボタン・小さい要素の間" },
+    "3": { "$type": "dimension", "$value": "12px", "$description": "カード内の行間・ヘッダー内の要素間・カード同士（密）" },
+    "4": { "$type": "dimension", "$value": "16px", "$description": "画面の左右余白・カード内側・セクション内の要素間" },
+    "5": { "$type": "dimension", "$value": "20px", "$description": "セクション内のブロック間" },
+    "6": { "$type": "dimension", "$value": "24px", "$description": "ボタンの左右・大きいカードの内側・セクション間" },
+    "8": { "$type": "dimension", "$value": "32px", "$description": "ページ末尾の余白・大きな区切り" }
+  }
+}

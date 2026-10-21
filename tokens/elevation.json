@@ -1,0 +1,13 @@
+{
+  "$description": "影トークン。段階は2つだけ。値の正はこのファイル。",
+  "shadow": {
+    "1": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "2px", "blur": "8px", "spread": "0px", "color": "rgba(23, 58, 82, 0.15)" }, "$description": "カード・吹き出し・塗りボタン" },
+    "2": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "8px", "blur": "24px", "spread": "0px", "color": "rgba(23, 58, 82, 0.22)" }, "$description": "モーダル・画面の主役のカード型ボタン" },
+    "nav": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "-2px", "blur": "8px", "spread": "0px", "color": "rgba(23, 58, 82, 0.06)" }, "$description": "ボトムナビの上辺" }
+  },
+  "z-index": {
+    "chrome": { "$type": "number", "$value": 20, "$description": "ヘッダー・ボトムナビ" },
+    "toast": { "$type": "number", "$value": 30, "$description": "トースト。【暫定】" },
+    "modal": { "$type": "number", "$value": 40, "$description": "モーダル（dialog 要素を使う場合は不要）。【暫定】" }
+  }
+}

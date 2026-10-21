@@ -1,0 +1,18 @@
+{
+  "$description": "動きトークン。動きは状態の変化を伝えるときだけ使う。prefers-reduced-motion では 0 にする。",
+  "duration": {
+    "press": { "$type": "duration", "$value": "60ms", "$description": "ボタン押下の縮小" },
+    "feedback": { "$type": "duration", "$value": "160ms", "$description": "入力の正誤・小さな状態変化" },
+    "base": { "$type": "duration", "$value": "200ms", "$description": "hover・色の変化・開閉矢印の回転" },
+    "enter": { "$type": "duration", "$value": "300ms", "$description": "モーダル・トーストの出現。【暫定】" },
+    "exit": { "$type": "duration", "$value": "200ms", "$description": "モーダル・トーストの消去（enter の約2/3）。【暫定】" }
+  },
+  "easing": {
+    "standard": { "$type": "cubicBezier", "$value": [0, 0, 0.58, 1], "$description": "ease-out。出現・hover" },
+    "exit": { "$type": "cubicBezier", "$value": [0.42, 0, 1, 1], "$description": "ease-in。消去" }
+  },
+  "scale": {
+    "press": { "$type": "number", "$value": 0.96, "$description": "ボタン押下" },
+    "press-card": { "$type": "number", "$value": 0.98, "$description": "カード型ボタン押下" }
+  }
+}

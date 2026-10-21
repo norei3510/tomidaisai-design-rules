@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>骨格: 操作が主役のページ</title>
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="skeleton.css">
+</head>
+<body>
+<!-- 操作が主役のページ: 案内 → カード型ボタン1つ → 代わりの方法（入力） → 控えめな操作。
+     例: 来場者企画のQR案内画面、受付・スタンプ・アンケートの入口 -->
+<div class="page">
+  <header class="site-header">
+    <a class="site-header__logo" href="/3190/">ロゴ</a>
+    <div class="site-header__slot"><!-- 例: 来場者企画は進捗ドット --></div>
+  </header>
+
+  <div class="notice" role="status" id="notice" hidden>
+    <p>［画面全体に関わる注意］</p>
+    <button class="notice__close" type="button" aria-label="案内を閉じる">×</button>
+  </div>
+
+  <main class="page__main" id="main">
+    <div class="page__inner" style="gap: var(--space-4);">
+      <div class="page-head">
+        <h1 class="h1">［いまどこか・何をするか］</h1>
+        <p class="lead">［案内を1〜2文。トミー君の吹き出しを使う場合は components/specific/guide-speech.md］</p>
+      </div>
+
+      <button class="card-button" type="button" id="hero">
+        <span class="card-button__visual" aria-hidden="true"></span>
+        <span>［操作の説明を1文］</span>
+        <span class="card-button__label">QRコードを読み取る</span>
+      </button>
+
+      <form class="card card--outline field" id="code-form" novalidate style="padding: var(--space-4); gap: var(--space-2);">
+        <label for="code">場所コード</label>
+        <p class="field__help" id="code-help">QRコードが読めないときは、看板の英数字を入力してください。</p>
+        <div class="field__row">
+          <input id="code" name="code" inputmode="latin" autocomplete="off" aria-describedby="code-help code-error">
+          <button class="button-inline" type="submit">開く</button>
+        </div>
+        <p class="field__error" id="code-error" role="alert" hidden>英数字で入力してください。</p>
+      </form>
+
+      <button class="button button--ghost button--block" type="button">［控えめな操作。例: 続きから始める］</button>
+    </div>
+  </main>
+
+  <nav class="bottom-nav" aria-label="サイト">
+    <a class="bottom-nav__item" href="/2026/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></svg></span><span class="bottom-nav__label">TOP</span></a>
+    <a class="bottom-nav__item" href="/2026/stage/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></span><span class="bottom-nav__label">ステージ</span></a>
+    <a class="bottom-nav__item" href="/2026/events/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h11l-2 4 2 4H5"/></svg></span><span class="bottom-nav__label">企画</span></a>
+    <a class="bottom-nav__item" href="/3190/" aria-current="page"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.3"/><path d="M15.8 14.1A4.5 4.5 0 0 1 21 18.5"/></svg></span><span class="bottom-nav__label">来場者企画</span></a>
+    <a class="bottom-nav__item" href="/2026/map/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4zM9 4v14M15 6v14"/></svg></span><span class="bottom-nav__label">マップ</span></a>
+  </nav>
+</div>
+<script>
+  const form = document.getElementById('code-form');
+  const input = document.getElementById('code');
+  const error = document.getElementById('code-error');
+  const notice = document.getElementById('notice');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const ok = /^[A-Za-z0-9]+$/.test(input.value.trim());
+    input.setAttribute('aria-invalid', String(!ok));
+    error.hidden = ok;
+    if (!ok) input.focus();
+  });
+  input.addEventListener('focus', () => setTimeout(() => input.scrollIntoView({ block: 'center' }), 350));
+  document.getElementById('hero').addEventListener('click', () => { notice.hidden = false; });
+  notice.querySelector('button').addEventListener('click', () => { notice.hidden = true; });
+</script>
+</body>
+</html>

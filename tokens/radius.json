@@ -1,0 +1,10 @@
+{
+  "$description": "角丸トークン。値の正はこのファイル。",
+  "radius": {
+    "chip": { "$type": "dimension", "$value": "8px", "$description": "タグ・チップ・小型ボタン・アコーディオン行" },
+    "input": { "$type": "dimension", "$value": "10px", "$description": "入力欄・入力の隣のボタン" },
+    "card": { "$type": "dimension", "$value": "14px", "$description": "カード・吹き出し・ダイアログ（小窓）" },
+    "modal": { "$type": "dimension", "$value": "20px", "$description": "モーダル・画面の主役になる大きいカード型ボタン" },
+    "pill": { "$type": "dimension", "$value": "999px", "$description": "ボタン・ナビの選択ピル・バッジ" }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$description": "寸法トークン。操作領域・共通枠・アイコン・コンテンツ幅。値の正はこのファイル。",
+  "frame": {
+    "design-width": { "$type": "dimension", "$value": "390px", "$description": "デザイン基準幅（Figma 390×844）" },
+    "design-height": { "$type": "dimension", "$value": "844px", "$description": "デザイン基準高さ" },
+    "content-max": { "$type": "dimension", "$value": "480px", "$description": "1カラムの本文幅の上限。【暫定】来場者企画のQR案内画面の値" },
+    "content-wide-max": { "$type": "dimension", "$value": "960px", "$description": "768px以上で一覧を2列にするときの上限。【暫定】本リポジトリでの新設値" }
+  },
+  "chrome": {
+    "header-height": { "$type": "dimension", "$value": "67px", "$description": "共通ヘッダー（＋上セーフエリア）" },
+    "header-logo-height": { "$type": "dimension", "$value": "47px", "$description": "ヘッダーのロゴ高さ" },
+    "nav-height": { "$type": "dimension", "$value": "60px", "$description": "ボトムナビ（＋下セーフエリア）" },
+    "nav-pill-width": { "$type": "dimension", "$value": "48px", "$description": "ナビの選択ピル" },
+    "nav-pill-height": { "$type": "dimension", "$value": "28px", "$description": "ナビの選択ピル" }
+  },
+  "control": {
+    "touch-min": { "$type": "dimension", "$value": "44px", "$description": "押せる要素の最小（縦横）" },
+    "button-height": { "$type": "dimension", "$value": "48px", "$description": "主要ボタン・入力欄・アコーディオン見出し" },
+    "button-height-lg": { "$type": "dimension", "$value": "52px", "$description": "画面で一番大きい操作（カード型ボタン内のラベル）" },
+    "tag-height": { "$type": "dimension", "$value": "24px", "$description": "タグ・小型チップ（押せるなら当たり判定を44pxに広げる）" }
+  },
+  "icon": {
+    "nav": { "$type": "dimension", "$value": "22px", "$description": "ボトムナビのアイコン" },
+    "inline": { "$type": "dimension", "$value": "14px", "$description": "タグ・ラベル内のアイコン" },
+    "empty": { "$type": "dimension", "$value": "28px", "$description": "空状態・画像なしの代替表示" },
+    "stroke": { "$type": "number", "$value": 1.8, "$description": "線アイコンの線幅（viewBox 24）" },
+    "stroke-active": { "$type": "number", "$value": 2.2, "$description": "選択中アイコンの線幅" }
+  }
+}

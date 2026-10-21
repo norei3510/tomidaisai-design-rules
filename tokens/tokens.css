@@ -1,5 +1,9 @@
-/* Shared tokens v0.1.0. Source: current visitor UI, 2026-10-21. */
+/* 富大祭 共通トークン v0.2.0
+   値の正は tokens/*.json。このファイルはそのCSS版で、JSONと同じ値を持つ。
+   1層目（primitive）は来場者企画 front/src/design-tokens.css と同じ変数名。
+   新しいUIは2層目（--color-* などの semantic）を参照する。参照ルールは guidelines/TOKEN_GUIDE.md。 */
 :root {
+  /* ---- primitive: color ---- */
   --bg: #c8e7ff;
   --white: #ffffff;
   --main: #2082c3;
@@ -11,10 +15,15 @@
   --ink: #173a52;
   --muted: #5b7a93;
   --danger: #d93636;
+  --danger-text: #a42a23;
+  --progress-done: #ffd166;
   --surface-soft: #eaf5ff;
   --surface-warm: #fff1e5;
   --border: #c6dfef;
   --overlay: rgba(23, 58, 82, .45);
+
+  /* ---- primitive: type ---- */
+  --font-family-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
   --font-xs: 12px;
   --font-sm: 14px;
   --font-body: 16px;
@@ -22,8 +31,15 @@
   --font-xl: 22px;
   --font-2xl: 26px;
   --font-display: 34px;
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+  --weight-black: 900;
   --leading-body: 1.7;
+  --leading-compact: 1.5;
   --leading-heading: 1.3;
+
+  /* ---- primitive: space / radius / shadow ---- */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -31,18 +47,83 @@
   --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
-  --radius-card: 14px;
-  --radius-input: 10px;
   --radius-chip: 8px;
+  --radius-input: 10px;
+  --radius-card: 14px;
   --radius-modal: 20px;
   --radius-pill: 999px;
-  --radius: var(--radius-card);
+  --radius: var(--radius-card);           /* 互換名。新規では使わない */
   --shadow-1: 0 2px 8px rgba(23, 58, 82, .15);
   --shadow-2: 0 8px 24px rgba(23, 58, 82, .22);
-  --shadow: var(--shadow-1);
-  --font-family-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  --shadow-nav: 0 -2px 8px rgba(23, 58, 82, .06);
+  --shadow: var(--shadow-1);              /* 互換名。新規では使わない */
+
+  /* ---- sizing ---- */
+  --frame-design-width: 390px;
+  --content-max: 480px;
+  --content-wide-max: 960px;
+  --header-height: 67px;
+  --header-logo-height: 47px;
+  --nav-height: 60px;
+  --touch-min: 44px;
+  --control-height: 48px;
+  --control-height-lg: 52px;
+  --tag-height: 24px;
+  --icon-nav: 22px;
+  --icon-inline: 14px;
+  --icon-empty: 28px;
+  --icon-stroke: 1.8;
+  --icon-stroke-active: 2.2;
+
+  /* ---- motion ---- */
+  --duration-press: 60ms;
+  --duration-feedback: 160ms;
+  --duration-base: 200ms;
+  --duration-enter: 300ms;
+  --duration-exit: 200ms;
+  --ease-standard: ease-out;
+  --ease-exit: ease-in;
+  --scale-press: .96;
+  --scale-press-card: .98;
+
+  /* ---- safe area ---- */
   --safe-area-top: env(safe-area-inset-top, 0px);
   --safe-area-right: env(safe-area-inset-right, 0px);
   --safe-area-bottom: env(safe-area-inset-bottom, 0px);
   --safe-area-left: env(safe-area-inset-left, 0px);
+
+  /* ---- semantic: color ---- */
+  --color-bg-page: var(--bg);
+  --color-bg-surface: var(--white);
+  --color-bg-surface-soft: var(--surface-soft);
+  --color-bg-surface-warm: var(--surface-warm);
+  --color-bg-header: var(--main-dark);
+  --color-bg-overlay: var(--overlay);
+  --color-text-primary: var(--ink);
+  --color-text-secondary: var(--muted);
+  --color-text-on-fill: var(--white);
+  --color-text-link: var(--main-dark);
+  --color-text-accent: var(--accent-text);
+  --color-text-danger: var(--danger-text);
+  --color-action-primary: var(--accent-text);
+  --color-action-primary-pressed: var(--accent-dark);
+  --color-action-secondary: var(--main-dark);
+  --color-action-secondary-pressed: var(--main-pressed);
+  --color-border-default: var(--border);
+  --color-border-input: var(--main);
+  --color-border-danger: var(--danger);
+  --color-focus-ring: var(--ink);
+  --color-graphic-accent: var(--accent);
+  --color-graphic-main: var(--main);
+  --color-status-done: var(--progress-done);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-press: 0ms;
+    --duration-feedback: 0ms;
+    --duration-base: 0ms;
+    --duration-enter: 0ms;
+    --duration-exit: 0ms;
+  }
 }
