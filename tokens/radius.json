@@ -1,10 +1,11 @@
 {
-  "$description": "角丸トークン。値の正はこのファイル。",
+  "$description": "角丸トークン。値の正はこのファイル。当日ページは block と pill の2種類だけを使う（guidelines/FOUNDATIONS.md §5）。chip〜modal は来場者企画と共通の値で、当日ページではダイアログ・入力・チップにだけ使う。",
   "radius": {
+    "block": { "$type": "dimension", "$value": "4px", "$description": "当日ページの情報ブロック・主役の枠・場所コードの札・押せる行のまとまり" },
     "chip": { "$type": "dimension", "$value": "8px", "$description": "タグ・チップ・小型ボタン・アコーディオン行" },
     "input": { "$type": "dimension", "$value": "10px", "$description": "入力欄・入力の隣のボタン" },
-    "card": { "$type": "dimension", "$value": "14px", "$description": "カード・吹き出し・ダイアログ（小窓）" },
-    "modal": { "$type": "dimension", "$value": "20px", "$description": "モーダル・画面の主役になる大きいカード型ボタン" },
+    "card": { "$type": "dimension", "$value": "14px", "$description": "来場者企画のカード・吹き出し・ダイアログ（小窓）" },
+    "modal": { "$type": "dimension", "$value": "20px", "$description": "モーダル・来場者企画の主役のカード型ボタン" },
     "pill": { "$type": "dimension", "$value": "999px", "$description": "ボタン・ナビの選択ピル・バッジ" }
   }
 }

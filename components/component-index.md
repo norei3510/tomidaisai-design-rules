@@ -10,8 +10,10 @@
 | 共通ヘッダー | `base/header.md` | 青い帯。ロゴ左、ページ固有の要素右 |
 | ボトムナビ | `base/bottom-nav.md` | 5項目のサイトナビ。選択中は橙＋ピル |
 | ボタン | `base/button.md` | primary（橙）／secondary（青）／ghost（白＋青枠）。ピル形 |
-| カード | `base/card.md` | 白い面＋角丸14＋影。カード型ボタンも含む |
-| リスト行 | `base/list-item.md` | 文字中心の一覧の1行 |
+| カード | `base/card.md` | 当日ページはサイン板（青い見出しの帯＋青の外枠、1画面1つ）・押せる1件・白い帯だけ。来場者企画のカードも含む |
+| リスト行 | `base/list-item.md` | 文字中心の一覧の1行。左端に時刻か場所コード |
+| 場所コードの札 | `base/place-code.md` | 建物を `A`・`B2` などの札で示す。一覧・表・地図で共通 |
+| 現在時刻の印 | `base/now-marker.md` | 開催中の印・現在時刻の線・TOP の大きな時刻（橙） |
 | チップ・タグ・バッジ | `base/chip.md` | 絞り込み・分類・ラベル |
 | 入力欄 | `base/text-field.md` | ラベル＋入力＋補足／エラー |
 | アコーディオン | `base/accordion.md` | `<details>` で補足を折りたたむ |

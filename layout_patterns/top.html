@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>骨格: 当日TOP</title>
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="skeleton.css">
+</head>
+<body>
+<!-- 当日TOP: 現在時刻 → サイン板（開催中・次に始まる）→ 入口の札。ヒーロー画像・キャッチコピーは置かない（PAGE_LAYOUT_GUIDE §6） -->
+<div class="page">
+  <header class="site-header">
+    <a class="site-header__logo" href="/2026/">ロゴ</a>
+    <div class="site-header__slot"></div>
+  </header>
+
+  <div><!-- 通知バーを出すときだけ .notice を入れる（雨天・中止など） --></div>
+
+  <main class="page__main" id="main">
+    <div class="page__inner">
+      <div class="now-hero">
+        <h1 class="h1">富大祭2026</h1>
+        <div class="now-hero__row">
+          <span class="now-badge">いま</span>
+          <time class="num now-hero__time" datetime="［2026-10-24T13:40］">［13:40］</time>
+        </div>
+        <p class="page-meta">［10月24日（土）］・［1日目］・［17:00］まで</p>
+      </div>
+
+      <section class="sign" aria-labelledby="now-title">
+        <div class="sign__head"><h2 id="now-title">開催中</h2><span class="num">［件数］件</span></div>
+        <div class="sign__body">
+        <ul class="list" role="list">
+          <li><a class="list-item" href="detail.html">
+            <span class="num list-item__time">［13:00］</span>
+            <span class="list-item__body">
+              <span class="list-item__title">［企画名］</span>
+              <span class="place-code"><span class="place-code__id">［A］</span><span class="place-code__name">［建物名］</span></span>
+            </span>
+            <span class="now-badge">開催中</span>
+          </a></li>
+          <li><a class="list-item" href="detail.html">
+            <span class="num list-item__time">［13:30］</span>
+            <span class="list-item__body">
+              <span class="list-item__title">［企画名］</span>
+              <span class="place-code"><span class="place-code__id">［B2］</span><span class="place-code__name">［建物名］</span></span>
+            </span>
+            <span class="now-badge">開催中</span>
+          </a></li>
+        </ul>
+        <div class="rule-head"><h2 class="h2">次に始まる</h2></div>
+        <ul class="list" role="list">
+          <li><a class="list-item" href="detail.html">
+            <span class="num list-item__time">［14:00］</span>
+            <span class="list-item__body">
+              <span class="list-item__title">［企画名］</span>
+              <span class="place-code"><span class="place-code__id">［C］</span><span class="place-code__name">［建物名］</span></span>
+            </span>
+          </a></li>
+        </ul>
+        <p class="ph">開催時間外: 「本日の企画は終わりました。」＋次の開催日の開始時刻。開催日以外は「いま」の印と現在時刻を出さない</p>
+        </div>
+      </section>
+
+      <nav aria-label="当日の案内">
+        <ul class="entry-list" role="list">
+          <li><a class="entry" href="list.html">
+            <span class="entry__name">企画一覧</span><span class="num entry__count">［件数］件</span>
+            <svg class="entry__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></li>
+          <li><a class="entry" href="timetable.html">
+            <span class="entry__name">タイムテーブル</span><span class="num entry__count">［ステージ数］ステージ</span>
+            <svg class="entry__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></li>
+          <li><a class="entry" href="map.html">
+            <span class="entry__name">マップ</span><span class="num entry__count">［建物数］か所</span>
+            <svg class="entry__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <nav class="bottom-nav" aria-label="サイト">
+    <a class="bottom-nav__item" href="/2026/" aria-current="page"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></svg></span><span class="bottom-nav__label">TOP</span></a>
+    <a class="bottom-nav__item" href="/2026/stage/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></span><span class="bottom-nav__label">ステージ</span></a>
+    <a class="bottom-nav__item" href="/2026/events/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h11l-2 4 2 4H5"/></svg></span><span class="bottom-nav__label">企画</span></a>
+    <a class="bottom-nav__item" href="/3190/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.3"/><path d="M15.8 14.1A4.5 4.5 0 0 1 21 18.5"/></svg></span><span class="bottom-nav__label">来場者企画</span></a>
+    <a class="bottom-nav__item" href="/2026/map/"><span class="bottom-nav__pill"><svg class="bottom-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4zM9 4v14M15 6v14"/></svg></span><span class="bottom-nav__label">マップ</span></a>
+  </nav>
+</div>
+</body>
+</html>

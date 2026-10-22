@@ -12,3 +12,6 @@
 | ページ | ファイル | 骨格 |
 |---|---|---|
 | 来場者企画 | （unifes26-vp で管理。本リポジトリの基準元） | — |
+| 企画一覧 | `2026-events.md` | list |
+| タイムテーブル | `2026-stage.md` | timetable |
+| 企画詳細 | `2026-event-detail.md` | detail |

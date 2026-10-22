@@ -25,6 +25,7 @@
     "bg-surface-soft": { "$type": "color", "$value": "{primitive.blue-50}", "$description": "カード内の補助領域・空状態" },
     "bg-surface-warm": { "$type": "color", "$value": "{primitive.orange-50}", "$description": "選択中ナビのピル・橙系の強調面" },
     "bg-header": { "$type": "color", "$value": "{primitive.blue-700}", "$description": "共通ヘッダー" },
+    "bg-sign": { "$type": "color", "$value": "{primitive.blue-700}", "$description": "サイン板（主役の枠）の見出しの帯。白文字を載せる（6.1:1）" },
     "bg-overlay": { "$type": "color", "$value": "{primitive.overlay}", "$description": "モーダル・ダイアログ背面" },
     "text-primary": { "$type": "color", "$value": "{primitive.navy-900}", "$description": "本文・見出し" },
     "text-secondary": { "$type": "color", "$value": "{primitive.navy-500}", "$description": "補足文。白い面の上のみ・12px以上" },
@@ -37,11 +38,15 @@
     "action-secondary": { "$type": "color", "$value": "{primitive.blue-700}", "$description": "副操作ボタンの塗り・枠線ボタンの枠と文字" },
     "action-secondary-pressed": { "$type": "color", "$value": "{primitive.blue-800}", "$description": "副操作の押下・hover" },
     "border-default": { "$type": "color", "$value": "{primitive.blue-200}", "$description": "区切り線・カード枠" },
+    "border-strong": { "$type": "color", "$value": "{primitive.navy-900}", "$description": "当日ページの罫線（見出しの下・表の外枠、2px）" },
+    "border-sign": { "$type": "color", "$value": "{primitive.blue-700}", "$description": "サイン板（主役の枠）の外枠（2px）。見出しの帯と同じ色" },
     "border-input": { "$type": "color", "$value": "{primitive.blue-500}", "$description": "入力欄の枠（2px）" },
     "border-danger": { "$type": "color", "$value": "{primitive.red-500}", "$description": "エラー状態の入力欄の枠" },
     "focus-ring": { "$type": "color", "$value": "{primitive.navy-900}", "$description": "キーボードフォーカス枠（3px）" },
     "graphic-accent": { "$type": "color", "$value": "{primitive.orange-500}", "$description": "装飾線・スキャン線・注意の下線など、文字以外の橙" },
     "graphic-main": { "$type": "color", "$value": "{primitive.blue-500}", "$description": "図形・アイコン・枠など、文字以外の青" },
-    "status-done": { "$type": "color", "$value": "{primitive.yellow-300}", "$description": "達成済みの印（形状の変化と併用）" }
+    "status-done": { "$type": "color", "$value": "{primitive.yellow-300}", "$description": "達成済みの印（形状の変化と併用）" },
+    "status-now": { "$type": "color", "$value": "{primitive.orange-700}", "$description": "「開催中」「いまここ」の印の塗り。白文字を載せてよい（5.4:1）" },
+    "graphic-now": { "$type": "color", "$value": "{primitive.orange-500}", "$description": "タイムテーブルの現在時刻の線・マップで選んだ建物の枠など、文字以外の「いま・ここ」" }
   }
 }

@@ -1,8 +1,8 @@
 {
-  "$description": "影トークン。段階は2つだけ。値の正はこのファイル。",
+  "$description": "影トークン。値の正はこのファイル。当日ページは 2（ダイアログ）だけを使い、ほかは影なし（guidelines/FOUNDATIONS.md §5）。",
   "shadow": {
-    "1": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "2px", "blur": "8px", "spread": "0px", "color": "rgba(23, 58, 82, 0.15)" }, "$description": "カード・吹き出し・塗りボタン" },
-    "2": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "8px", "blur": "24px", "spread": "0px", "color": "rgba(23, 58, 82, 0.22)" }, "$description": "モーダル・画面の主役のカード型ボタン" },
+    "1": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "2px", "blur": "8px", "spread": "0px", "color": "rgba(23, 58, 82, 0.15)" }, "$description": "来場者企画のカード・吹き出し・塗りボタン。当日ページでは使わない" },
+    "2": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "8px", "blur": "24px", "spread": "0px", "color": "rgba(23, 58, 82, 0.22)" }, "$description": "モーダル・ダイアログ。来場者企画では主役のカード型ボタンにも使う" },
     "nav": { "$type": "shadow", "$value": { "offsetX": "0px", "offsetY": "-2px", "blur": "8px", "spread": "0px", "color": "rgba(23, 58, 82, 0.06)" }, "$description": "ボトムナビの上辺" }
   },
   "z-index": {

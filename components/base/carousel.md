@@ -15,7 +15,7 @@
 |---|---|
 | 1枚の幅 | 表示領域の72%まで、かつ高さに収まる大きさ（`min(72cqw, 100cqh * 画像の幅 / 高さ)`） |
 | 並べ方 | 中央に1枚、両隣を少し見せる。`scroll-snap-type: x mandatory`、`scroll-snap-align: center`、間 `space-3` |
-| 画像 | 比率を保つ（チラシは 848:1200）。1px `color-border-default`、角丸 6px【暫定】、`shadow-1` |
+| 画像 | 比率を保つ（チラシは 848:1200）。1px `color-border-default`、角丸 6px【暫定】（当日ページは `radius-block`）、`shadow-1`（当日ページは影なし） |
 | 名前 | 画像の下、`font-sm`、1行で省略 |
 | 位置の印 | 8px の丸、間 `space-2`。通常 `color-border-default`、いま見ている1枚 `color-action-secondary` |
 | 押したとき | 拡大のダイアログ（`dialog.md`）で全体を表示 |

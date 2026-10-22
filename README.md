@@ -47,9 +47,9 @@ tomidaisai-design-rules/
 ├── guidelines/            判断のルール 6本
 ├── components/
 │   ├── component-index.md
-│   ├── base/              どのページでも使う部品 11種
+│   ├── base/              どのページでも使う部品 13種
 │   └── specific/          来場者企画だけの部品
-├── layout_patterns/       骨格HTML 4種と skeleton.css、選び方
+├── layout_patterns/       骨格HTML 7種と skeleton.css、選び方
 ├── review/                レビュー観点と、気づきの記録
 └── pages/                 ページごとの判断（ひな形あり）
 ```
@@ -58,7 +58,7 @@ tomidaisai-design-rules/
 `layout_patterns/list.html` などをブラウザで直接開きます（`tokens/tokens.css` と `skeleton.css` を相対パスで読みます）。
 
 ## 取り込みと更新
-- 利用側はタグ（例: `v0.2.0`）を固定して `tokens/tokens.css` を取り込みます。実行時にGitHubから取得する必要はありません
+- 利用側はタグ（例: `v0.3.0`）を固定して `tokens/tokens.css` を取り込みます。実行時にGitHubから取得する必要はありません
 - 値を変えるときは JSON → `tokens.css` → `CHANGELOG.md` の順に直します。各サイトへの適用はサイトごとに確認します
 - 共通ルールの追加・変更は `review/FINDINGS.md` に提案し、人が承認してから反映します
 - 分類: 【確定】実装と根拠の両方で確認できる／【暫定】実装にあるが根拠が未確認、または本リポジトリで新設／【未定】決められない

@@ -5,8 +5,8 @@
 ## 種類
 | 種類 | 背景 | 文字 | 枠 | 影 | 押下・hover |
 |---|---|---|---|---|---|
-| primary | `color-action-primary` | `color-text-on-fill` | なし | `shadow-1` | `color-action-primary-pressed` |
-| secondary | `color-action-secondary` | `color-text-on-fill` | なし | `shadow-1` | `color-action-secondary-pressed` |
+| primary | `color-action-primary` | `color-text-on-fill` | なし | なし（来場者企画は `shadow-1`） | `color-action-primary-pressed` |
+| secondary | `color-action-secondary` | `color-text-on-fill` | なし | なし（来場者企画は `shadow-1`） | `color-action-secondary-pressed` |
 | ghost | `color-bg-surface` | `color-action-secondary` | 2px `color-action-secondary`（狭い所は1px） | なし | 背景 `color-bg-surface-soft` |
 
 ## 大きさ

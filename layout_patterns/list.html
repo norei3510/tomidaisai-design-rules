@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="skeleton.css">
 </head>
 <body>
-<!-- 一覧ページ: 見出し → 絞り込み → 一覧。例: 企画一覧・ステージの演目一覧 -->
+<!-- 一覧ページ: 見出し（件数）→ 絞り込み → 場所コードごとの索引。例: 企画一覧・出展一覧。
+     紙のパンフレットの企画一覧のように、建物ごとに札の見出しで区切り、行の左端に時刻を置く -->
 <div class="page">
   <header class="site-header">
     <a class="site-header__logo" href="/2026/">ロゴ</a>
@@ -20,9 +21,8 @@
   <main class="page__main" id="main">
     <div class="page__inner page__inner--wide">
       <div class="page-head">
-        <p class="eyebrow">EVENTS</p>
-        <h1 class="h1">企画</h1>
-        <p class="lead">［ページの説明を1文で］</p>
+        <h1 class="h1">企画一覧</h1>
+        <p class="page-meta"><span class="num">［件数］</span>件・開催中 <span class="num">［件数］</span>件</p>
       </div>
 
       <section class="section" aria-label="絞り込み">
@@ -35,55 +35,50 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="list-title">
-        <h2 class="h2" id="list-title">［一覧の見出し］</h2>
-        <div class="grid-2">
+      <div class="grid-2">
+        <section class="section" aria-labelledby="place-a">
+          <div class="rule-head">
+            <h2 class="place-code place-code--lg" id="place-a"><span class="place-code__id">［A］</span><span class="place-code__name">［建物名］</span></h2>
+            <span class="num">［件数］件</span>
+          </div>
           <ul class="list" role="list">
             <li><a class="list-item" href="detail.html">
-              <span class="list-item__thumb" aria-hidden="true"></span>
+              <span class="num list-item__time">［10:00］</span>
               <span class="list-item__body">
                 <span class="list-item__title">［企画名］</span>
-                <span class="list-item__meta">［場所］・［時間］</span>
+                <span class="list-item__meta">［団体名］・［部屋］</span>
               </span>
-              <svg class="list-item__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+              <span class="now-badge">開催中</span>
             </a></li>
             <li><a class="list-item" href="detail.html">
-              <span class="list-item__thumb" aria-hidden="true"></span>
+              <span class="num list-item__time">［11:30］</span>
               <span class="list-item__body">
                 <span class="list-item__title">［企画名］</span>
-                <span class="list-item__meta">［場所］・［時間］</span>
-              </span>
-              <svg class="list-item__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-            </a></li>
-            <li><a class="list-item" href="detail.html">
-              <span class="list-item__thumb" aria-hidden="true"></span>
-              <span class="list-item__body">
-                <span class="list-item__title">［企画名］</span>
-                <span class="list-item__meta">［場所］・［時間］</span>
+                <span class="list-item__meta">［団体名］・［部屋］</span>
               </span>
               <svg class="list-item__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
             </a></li>
           </ul>
+        </section>
+
+        <section class="section" aria-labelledby="place-b2">
+          <div class="rule-head">
+            <h2 class="place-code place-code--lg" id="place-b2"><span class="place-code__id">［B2］</span><span class="place-code__name">［建物名］</span></h2>
+            <span class="num">［件数］件</span>
+          </div>
           <ul class="list" role="list">
             <li><a class="list-item" href="detail.html">
-              <span class="list-item__thumb" aria-hidden="true"></span>
+              <img class="list-item__thumb" src="" alt="" width="56" height="56" hidden><!-- 写真がある企画だけ。ない企画に空の枠を出さない -->
+              <span class="num list-item__time">［終日］</span>
               <span class="list-item__body">
                 <span class="list-item__title">［企画名］</span>
-                <span class="list-item__meta">［場所］・［時間］</span>
-              </span>
-              <svg class="list-item__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-            </a></li>
-            <li><a class="list-item" href="detail.html">
-              <span class="list-item__thumb" aria-hidden="true"></span>
-              <span class="list-item__body">
-                <span class="list-item__title">［企画名］</span>
-                <span class="list-item__meta">［場所］・［時間］</span>
+                <span class="list-item__meta">［団体名］・［部屋］</span>
               </span>
               <svg class="list-item__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
             </a></li>
           </ul>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <p class="ph">空のとき: 「この条件の企画はありません。条件を減らしてください。」＋［すべて表示］（message.html の空状態）</p>
     </div>

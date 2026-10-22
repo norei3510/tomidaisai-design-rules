@@ -19,10 +19,11 @@
 ## 仕様
 | 項目 | 値 |
 |---|---|
-| 一覧の面 | カード1枚（`card.md` §1）の中に行を並べ、行の間は1px `color-border-default` |
+| 一覧の面 | 白い帯（`card.md` §3）に行を並べ、行の間は1px `color-border-default`。建物ごとに区切るときは場所コードの見出し（`place-code.md`）を帯の外に置く |
+| 行の左端 | 当日ページでは、時刻（numeral 書体 `font-body` `weight-bold` `tabular-nums`、`white-space: nowrap`）か場所コードの札。サムネイルより先に置く |
 | 行の高さ | 最小 `touch-min`＋上下 `space-3` |
 | 左右の余白 | `space-4` |
-| サムネイル | 48〜64px 四方。チラシ・写真は比率を保つ（切り抜くなら一覧のサムネイルだけ、`object-fit: cover` を明示） |
+| サムネイル | 写真がある件だけ（ない件に空の枠を出さない）。48〜64px 四方。チラシ・写真は比率を保つ（切り抜くなら一覧のサムネイルだけ、`object-fit: cover` を明示） |
 | 名前 | `font-body` `weight-bold`、1行で省略（データの文字なので可） |
 | 補足 | `font-sm` `color-text-secondary`、1行 |
 | 右端 | 移動するなら右向きの線アイコン（`color-text-link`）。時刻などの値なら `white-space: nowrap` |
